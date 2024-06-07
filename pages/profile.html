@@ -29,6 +29,20 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
 
 </head>
+<style>
+    div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+        background-color: rgb(25, 25, 25) !important;
+        padding: 10px 27px !important;
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus {
+        box-shadow: 0 0 0 3px rgba(25, 25, 25, .5) !important;
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled).swal2-cancel {
+        padding: 10px 27px !important;
+    }
+</style>
 
 <body>
     <div class="loader-wrapper">
@@ -202,7 +216,7 @@
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav " href="help.html">
                                         <i data-feather="help-circle"></i>
-                                        <span>Help & Supports</span>
+                                        <span>Supports</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-list">
@@ -257,8 +271,8 @@
                                     <h6 class="mt-0 mb-0">lily@example.com</h6>
                                     <span style="color: #9993B4;font-weight: 600;">9876543210</span>
                                     <div class="mt-2">
-                                        <a href="../pages/authentication/login.html" class="btn btn-danger"
-                                            type="button" data-bs-original-title="" title="">Logout</a>
+                                        <a href="#" id="logoutBtn" class="btn btn-danger" type="button"
+                                            data-bs-original-title="" title="">Logout</a>
                                     </div>
                                 </div>
                             </div>
@@ -395,6 +409,23 @@
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/feather.min.js"></script>
     <script src="../assets/js/feather-icon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', function (event) {
+            event.preventDefault();
+            Swal.fire({
+                title: 'Are you sure you want to logout?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes',
+                cancelButtonText: 'No'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '../pages/authentication/login.html';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
