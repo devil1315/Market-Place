@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    max-height: 100%;
+}
+
+
+:root {
+    --navbar-bg: #1A1A1A;
+    --heading-text: #191919;
+    --small-para: #7B7B7B;
+    --card-heading: #263238;
+    --white: #fff;
+    --black: #000;
+    --placeholder: #BABBBC;
+    --input-stroke: #181818
+}
+
+.px-85 {
+    padding-left: 85px;
+    padding-right: 85px;
+}
+
+.nav-bar {
+    background-color: var(--navbar-bg);
+    color: var(--white);
+}
+
+.offcanvas {
+    background-color: var(--navbar-bg);
+    color: var(--white);
+}
+
+#nav-search input {
+    padding: 9px 18px;
+    width: 334px;
+    font-size: 14px;
+    font-weight: normal;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    border: 1px solid var(--input-stroke);
+    outline: none;
+    padding-right: 4rem;
+}
+
+#search-icon {
+    width: 53px;
+    height: 30px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    position: absolute;
+    background-color: var(--heading-text);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 18px;
+    top: 6px;
+}
+
+#search-icon i {
+    font-size: 18px;
+}
+
+.ms-22 {
+    margin-left: 22px;
+}
+
+.nav-link {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--white);
+}
+
+
+
+#sell .nav-link {
+    background-color: var(--white);
+    color: var(--heading-text);
+    padding: 14px 25px;
+    background-color: var(--white);
+    color: var(--heading-text);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+@media(max-width:1250px) {
+    .px-85 {
+        padding-left: inherit;
+        padding-right: inherit;
+    }
+}
+
+@media (max-width:992px) {
+    #search-icon {
+        right: 27px;
+    }
+
+    #sell .nav-link {
+        text-align: center;
+    }
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon-text p {
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--white);
+}
+
+.icon i {
+    font-size: 24px;
+    color: var(--white) !important;
+}
+
+.icon-text h6 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.dropdown-item {
+    font-weight: 600;
+}
+
+.mb-22 {
+    margin-bottom: 22px;
+}
