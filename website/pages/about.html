@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Store | Market Place</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/remixicon.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<style>
+
+</style>
+
+
+<body>
+    <div class="preloader ">
+        <div class="lds-ellipsis">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+
+    <div id="main-wrapper">
+        <div class="nav-bar px-85 py-30">
+            <div class="top-navbar mb-2">
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="../assets/images/logowhite.svg" alt="" class="img-fluid">
+                        </a>
+
+                        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            <span class="navbar-toggler-icon"></span>
+                        </button> -->
+
+
+
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close " data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                <div class="collapse navbar-collapse show" id="navbarSupportedContent">
+                                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                        <form class="d-flex justify-content-center position-relative align-items-center"
+                                            role="search" id="nav-search">
+                                            <input class="me-xl-2" type="search" placeholder="Search anything"
+                                                aria-label="Search">
+                                            <div id="search-icon">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                        </form>
+                                        <li class="nav-item ms-xl-4">
+                                            <a class="nav-link " aria-current="page" href="#">How to sell</a>
+                                        </li>
+                                        <li class="nav-item ms-xl-4">
+                                            <a class="nav-link" href="#">How to buy</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                        <li class="nav-item" id="sell">
+                                            <a class="nav-link " aria-current="page" href="#"><i class="fa fa-plus"></i>
+                                                Sell</a>
+                                        </li>
+                                        <li class="nav-item ms-xl-4" id="profile">
+                                            <div class="dropdown">
+                                                <a class="nav-link d-flex dropdown-toggle" href="#" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <div class="profile d-flex align-items-center gap-2">
+                                                        <div class="icon">
+                                                            <!-- <i class="fa-regular fa-user"></i> -->
+                                                            <i class="ri-user-line"></i>
+                                                        </div>
+                                                        <div class="icon-text">
+                                                            <p class="mb-0">Welcome</p>
+                                                            <h6 class="mb-0">Sign in/Register <i
+                                                                    class="fa-solid fa-chevron-down"></i></h6>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="./Authentication/login.html">Login</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="./Authentication/create_account.html">Register</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+            <div class="top-navbar">
+                <nav class="navbar navbar-expand-lg flex-lg-wrap flex-xl-nowrap">
+                    <div class="container-fluid">
+
+                        <div class="top-icons">
+                            <div class="menu-icons  d-flex align-items-center ">
+                                <span class="d-flex align-items-center justify-content-center "> <i
+                                        class="ri-add-line"></i></span>
+                                <a href="#" data-bs-toggle="offcanvas" data-bs-target="#search"
+                                    aria-controls="offcanvasRight" class="ms-22"> <i class="ri-search-line"></i></a>
+                                <!-- <a class="ms-22" href="#"><i class="fa-regular fa-user"></i></a> -->
+                                <div class="dropdown ms-22">
+                                    <a class="nav-link d-flex dropdown-toggle" href="#" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-user-line"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./Authentication/login.html">Login</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="./Authentication/create_account.html">Register</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#main_nav" aria-controls="offcanvasExample">
+                            <i class="fa-solid fa-bars hamburger"></i>
+                        </button>
+
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="main_nav"
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                                <button type="button" class="btn-close " style="background: none !important;"
+                                    data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <i class="fa fa-times text-white"></i></button>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                <div class="collapse navbar-collapse show justify-content-center flex-wrap"
+                                    id="navbarSupportedContent">
+                                    <div class="dropdown-container">
+                                        <select name="category" id="category" class="dropdown-category">
+                                            <option value="">All Category</option>
+                                            <option value="">Option 1</option>
+                                            <option value="">Option 2</option>
+                                            <option value="">Option 3</option>
+                                        </select>
+                                    </div>
+                                    <!-- <div class="dropdown-category">
+                                        <a class="navbar-brand d-flex align-items-center justify-content-between me-0"
+                                            href="#">
+                                            <div class="category d-flex align-items-center ">
+                                                <span class="material-symbols-outlined">
+                                                    filter_list
+                                                </span>
+                                                All Category
+                                            </div>
+                                            <span class="material-symbols-outlined">
+                                                keyboard_arrow_down</span>
+                                        </a>
+                                    </div> -->
+                                    <ul class="navbar-nav ms-xl-auto mb-2 mb-lg-0 ">
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link " aria-current="page" href="#">Exclusive store</a>
+                                        </li>
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link" href="#">Handmade products</a>
+                                        </li>
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link" href="#">Food courts</a>
+                                        </li>
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link" href="#">Open market</a>
+                                        </li>
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link" href="#">Advertise here</a>
+                                        </li>
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link" href="#">Blogs</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="coupon pl ">
+            <div class="container-fluid d-flex align-items-center justify-content-between">
+                <div class="sale-coupon d-flex flex-column">
+                    <h4 class="m-0">News flash ⚡️</h4>
+                    <p class="m-0">Expand Your Reach, Boost Your Sales, and Connect with Thousands of Customers
+                        Instantly. <span><a href="#">Shop now</a></span>
+                    </p>
+                </div>
+                <a href="#">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </a>
+            </div>
+        </div>
+
+        <section class="about py-100">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="about-header text-center">
+                            <h4>About Us</h4>
+                            <p>This is a dummy text placeholder to explain what the vision is in summary. This is a
+                                dummy text placeholder to explain what the vision is in summary. This is a dummy text
+                                placeholder to explain what the vision is in summary</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-grid pr py-50">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="grid-image">
+                            <img src="../assets/images/about-grid.svg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-grid-details">
+                            <h4>A LEADING DIVERSIFIED BUSINESS INSTITUTION</h4>
+                            <h1>Creating Wealth & Transforming Society</h1>
+                            <p>Our marketplace platform enables users to create detailed business profiles, enhancing
+                                their visibility and reach. With our platform, businesses can establish a comprehensive
+                                profile to increase their visibility and attract more customers. <br>
+                                Our marketplace allows businesses to set up profiles, boosting their online presence and
+                                making them more discoverable <br><br>
+
+                                Create a business profile on our platform to gain greater visibility and connect with a
+                                wider audience. Our platform offers businesses the opportunity to set up profiles,
+                                enhancing their visibility and expanding their customer base.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-grid pr py-50">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6">
+                        <div class="about-grid-details">
+                            <h1>Creating Wealth</h1>
+                            <p>We walk our talk. We embrace excellence and professionalism in all we do and build
+                                careers not jobs. We relate with all internal and external stakeholders with mutual
+                                respect based on open communication and engagement.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="grid-image text-end">
+                            <img src="../assets/images/wealth.svg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-grid pr py-50">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="grid-image ">
+                            <img src="../assets/images/audiance.svg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-grid-details">
+                            <h1>Gain more audience</h1>
+                            <p>We walk our talk. We embrace excellence and professionalism in all we do and build
+                                careers not jobs. We relate with all internal and external stakeholders with mutual
+                                respect based on open communication and engagement.
+                                <br>
+                                Create a business profile on our platform to gain greater visibility and connect with a
+                                wider audience. Our platform offers businesses the opportunity to set up profiles,
+                                enhancing their visibility and expanding their customer base.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="values pr py-50">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="value-heading text-center">
+                            <h4>OUR VALUE</h4>
+                            <p>Amongst other things we stand for, these are values we find at the core of our being.</p>
+                        </div>
+                        <div class="values-icon">
+                            <div>
+                                <img src="../assets/images/trust.svg" alt="" class="img-fluid">
+                                <h4>TRUST</h4>
+                            </div>
+                            <div>
+                                <img src="../assets/images/social.svg" alt="" class="img-fluid">
+                                <h4>Social Conscience</h4>
+                            </div>
+                            <div>
+                                <img src="../assets/images/audacity.svg" alt="" class="img-fluid">
+                                <h4>AUDACITY</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="create-account pr py-50">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="create-info">
+                            <h5>Ready to get started?</h5>
+                            <p class="mb-22">Begin your journey to financial freedom. Make your money work for you.
+                                Let's go!</p>
+                            <a href="./Authentication/create_account.html"
+                                class="btn btn-market radius-100 mb-22">Create an
+                                Account</a>
+                            <div>
+                                <a href="./Authentication/login.html" class="text-login">Already have an account?
+                                    Login</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="padlock text-end">
+                            <img src="../assets/images/padlock.svg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="create-account pr py-50">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="question-info">
+                            <h5 class="mb-12">HAVE QUESTIONS?</h5>
+                            <h1 class="mb-12">Get Answers Here.</h1>
+                            <p class="mb-12">Answers to the questions we believe you might have in mind.!</p>
+                            <a href="faq.html" class="btn btn-market radius-100 mb-22">Check
+                                our FAQ</a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="padlock text-end">
+                            <img src="../assets/images/question.svg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer " class="pr">
+            <div class="py-100 ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="footer-info">
+                                <div class="footer-logo mb-32">
+                                    <img src="../assets/images/logo.svg" alt="">
+                                </div>
+                                <div class="footer-text">
+                                    <h5 class="mb-32">We are the number one digital store rental platform offering
+                                        visibility and
+                                        customers to small businesses</h5>
+                                    <div class="footer-icons">
+                                        <p>Follow us</p>
+                                        <div>
+                                            <a href="#">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-brands fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <div class="quick-links">
+                                <h4 class="mb-32">QUICK-LINKS</h4>
+                                <div class="links">
+                                    <a href="#">Website</a>
+                                    <a href="#">Values</a>
+                                    <a href="#">Mission</a>
+                                    <a href="#">Values</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <div class="quick-links">
+                                <h4 class="mb-32">ABOUT</h4>
+                                <div class="links">
+                                    <a href="#">Website</a>
+                                    <a href="#">Values</a>
+                                    <a href="#">Mission</a>
+                                    <a href="#">Values</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <div class="quick-links">
+                                <h4 class="mb-32">Legal</h4>
+                                <div class="links">
+                                    <a href="#">Website</a>
+                                    <a href="#">Values</a>
+                                    <a href="#">Mission</a>
+                                    <a href="#">Values</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-text ">
+                <p class="mb-0">Market Place</p>
+                <p class="mb-0">All Rights Reserved © 2024</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="search" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-center">
+            <!-- <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5> -->
+            <button type="button" class="btn-close" style="background: none;" data-bs-dismiss="offcanvas"
+                aria-label="Close">
+                <i class="fa fa-times text-white"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <form class="d-flex justify-content-center position-relative align-items-center" role="search"
+                id="nav-search">
+                <input class="me-xl-2" type="search" placeholder="Search anything" aria-label="Search">
+                <div id="search-icon">
+                    <i class="fa fa-search"></i>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
