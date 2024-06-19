@@ -3009,16 +3009,3 @@ input[type=number] {
     display: none;
 }
 
-.owl-carousel.owl-loaded,
-.owl-carousel .owl-stage-outer {
-    overflow: initial;
-}
-
-.owl-item {
-    opacity: 0;
-    transition: opacity .75s linear;
-}
-
-.owl-item.active {
-    opacity: 1;
-}
