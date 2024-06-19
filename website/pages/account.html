@@ -33,7 +33,7 @@
             <div class="top-navbar mb-2">
                 <nav class="navbar navbar-expand-lg ">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
+                     <a class="navbar-brand" href="index.html">
                             <img src="../assets/images/logowhite.svg" alt="" class="img-fluid">
                         </a>
 
@@ -81,22 +81,19 @@
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     <div class="profile d-flex align-items-center gap-2">
                                                         <div class="icon">
-                                                            <!-- <i class="fa-regular fa-user"></i> -->
                                                             <i class="ri-user-line"></i>
                                                         </div>
                                                         <div class="icon-text">
-                                                            <p class="mb-0">Welcome</p>
-                                                            <h6 class="mb-0">Sign in/Register <i
+                                                            <p class="mb-0">Profile</p>
+                                                            <h6 class="mb-0">Jhone doe <i
                                                                     class="fa-solid fa-chevron-down"></i></h6>
                                                         </div>
                                                     </div>
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item"
-                                                            href="./Authentication/login.html">Login</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="./Authentication/create_account.html">Register</a>
+                                                    <li><a class="dropdown-item" href="account.html">My Profile</a>
                                                     </li>
+                                                    <li><a class="dropdown-item" href="index.html">Logout</a></li>
                                                 </ul>
                                             </div>
                                         </li>
@@ -125,11 +122,11 @@
                                     <a class="nav-link d-flex dropdown-toggle" href="#" type="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="ri-user-line"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="./Authentication/login.html">Login</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="./Authentication/create_account.html">Register</a></li>
-                                    </ul>
+                                     <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="account.html">My Profile</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                                                </ul>
                                 </div>
                             </div>
                         </div>
@@ -250,15 +247,19 @@
                                                                 class="ri-chat-1-line"></i> Message</a>
                                                     </li>
                                                     <li class="w-100  mb-12">
-                                                        <a href="store.html" class="custom-links"><i
+                                                        <a href="account-store.html" class="custom-links"><i
                                                                 class="ri-store-line"></i> My stores</a>
                                                     </li>
                                                     <li class="w-100  mb-12">
-                                                        <a href="message.html" class="custom-links"><i
+                                                        <a href="community.html" class="custom-links"><i
+                                                                class="ri-group-line"></i> Community</a>
+                                                    </li>
+                                                    <li class="w-100  mb-12">
+                                                        <a href="change-password.html" class="custom-links"><i
                                                                 class="ri-shield-keyhole-line"></i> Change Password</a>
                                                     </li>
                                                     <li class="w-100  mb-12">
-                                                        <a href="message.html" class="custom-links"><i
+                                                        <a href="support.html" class="custom-links"><i
                                                                 class="ri-questionnaire-line"></i> Support</a>
                                                     </li>
                                                 </ul>
@@ -266,7 +267,7 @@
                                                     <h5>You too can own a Virtual store with us</h5>
                                                     <p>Learn how you can also list your product to gain customer
                                                         visibility</p>
-                                                    <a href="#" class="btn btn-market radius-100 d-flex"
+                                                    <a href="create-store.html" class="btn btn-market radius-100 d-flex"
                                                         style="width: fit-content;">Get a store space</a>
                                                 </div>
                                             </div>
@@ -280,7 +281,14 @@
                     </div>
                     <div class="col-lg-9 py-30px" id="col-9">
                         <div class="main-info px-26px">
-                            <h4 class="mb-22">My Profile</h4>
+                            <div class="d-flex justify-content-between align-items-center mb-22">
+                                <h4 class="mb-0">My Profile</h4>
+                                <a href="#" class="text-black" data-bs-toggle="offcanvas" data-bs-target="#edit-profile"
+                                    aria-controls="offcanvasRight">
+                                    <h5 class="mb-0 fw-bolder">Edit details</h5>
+                                </a>
+
+                            </div>
                             <div class="card myCard border-0 p-22px"
                                 style="border: 1px solid #F0F4FF;border-radius: 12px !important;">
                                 <div class="mb-12">
@@ -410,7 +418,57 @@
             </form>
         </div>
     </div>
-
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="edit-profile" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-center">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Edit Profile</h5>
+            <button type="button" class="btn-close" style="background: none;" data-bs-dismiss="offcanvas"
+                aria-label="Close">
+                <i class="fa fa-times "></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <form class="">
+                <form action="account.html">
+                    <div class="mb-22">
+                        <div class="image-logo-container position-relative">
+                            <img src="../assets/images/user.png" alt="" id="image-preview" width="90" height="90"
+                                class="rounded-circle">
+                            <label for="input-file" style="cursor: pointer;">
+                                <div class="edit-shape">
+                                    <img src="../assets/images/edit.svg" alt="">
+                                </div>
+                                <input type="file" id="input-file" hidden="">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-22">
+                        <label for="name" class="mb-8">Name</label>
+                        <input type="text" class="custom-form" value="Daniel Israel">
+                    </div>
+                    <div class="mb-22">
+                        <label for="username" class="mb-8">Username</label>
+                        <input type="text" class="custom-form" value="Ukandu34">
+                    </div>
+                    <div class="mb-22">
+                        <label for="number" class="mb-8">Phone number</label>
+                        <input type="number" class="custom-form" value="2348160523342">
+                    </div>
+                    <div class="mb-22">
+                        <label for="email" class="mb-8">Email</label>
+                        <input type="email" class="custom-form" value="abayomiukandu87@gmail.com">
+                    </div>
+                    <div class="mb-22">
+                        <label for="bio" class="mb-8">Bio</label>
+                        <textarea rows="5"
+                            class="custom-form">This is a placeholder for your bio, you can say a few things about yourself here</textarea>
+                    </div>
+                    <div class="mb-22">
+                        <button class="btn mybtn w-100" type="submit">Save</button>
+                    </div>
+                </form>
+            </form>
+        </div>
+    </div>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/script.js"></script>
