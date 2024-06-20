@@ -20,3 +20,14 @@ $(window).on("load", function () {
       .addClass("loaded");
   }, 800);
 });
+
+const removeads = document.querySelector("#remove-ad");
+const coupon = document.querySelector(".coupon");
+
+removeads.addEventListener("click", function () {
+  coupon.classList.add("fade-out");
+
+  setTimeout(function () {
+    coupon.remove();
+  }, 1000);
+});
