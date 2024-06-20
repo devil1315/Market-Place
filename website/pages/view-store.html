@@ -333,7 +333,10 @@
                                                                     </div>
                                                                 </div>
                                                             </a>
-                                                            <a href="#" class="view-store-edit">Edit</a>
+                                                            <a href="#" class="view-store-edit"
+                                                                data-bs-toggle="offcanvas"
+                                                                data-bs-target="#edit-product"
+                                                                aria-controls="offcanvasRight">Edit</a>
                                                         </div>
                                                         <div class="owl-carousel owl-theme open-carousel">
                                                             <div class="item ">
@@ -373,7 +376,10 @@
                                                                     </div>
                                                                 </div>
                                                             </a>
-                                                            <a href="#" class="view-store-edit">Edit</a>
+                                                            <a href="#" class="view-store-edit"
+                                                                data-bs-toggle="offcanvas"
+                                                                data-bs-target="#edit-product"
+                                                                aria-controls="offcanvasRight">Edit</a>
                                                         </div>
 
                                                         <div class="owl-carousel owl-theme open-carousel">
@@ -415,7 +421,10 @@
                                                                     </div>
                                                                 </div>
                                                             </a>
-                                                            <a href="#" class="view-store-edit">Edit</a>
+                                                            <a href="#" class="view-store-edit"
+                                                                data-bs-toggle="offcanvas"
+                                                                data-bs-target="#edit-product"
+                                                                aria-controls="offcanvasRight">Edit</a>
                                                         </div>
 
                                                         <div class="owl-carousel owl-theme open-carousel">
@@ -456,7 +465,10 @@
                                                                     </div>
                                                                 </div>
                                                             </a>
-                                                            <a href="#" class="view-store-edit">Edit</a>
+                                                            <a href="#" class="view-store-edit"
+                                                                data-bs-toggle="offcanvas"
+                                                                data-bs-target="#edit-product"
+                                                                aria-controls="offcanvasRight">Edit</a>
                                                         </div>
 
                                                         <div class="owl-carousel owl-theme open-carousel">
@@ -584,7 +596,7 @@
     </div>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="add-product" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header justify-content-center">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Edit store</h5>
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Product</h5>
             <button type="button" class="btn-close" style="background: none;" data-bs-dismiss="offcanvas"
                 aria-label="Close">
                 <i class="fa fa-times "></i>
@@ -631,6 +643,64 @@
                     </div>
                     <div class="mb-22">
                         <button class="btn btn-market radius-100 w-100" type="submit">Post</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="edit-product" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-center">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Edit Product</h5>
+            <button type="button" class="btn-close" style="background: none;" data-bs-dismiss="offcanvas"
+                aria-label="Close">
+                <i class="fa fa-times "></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <form action="#">
+                <div class="mb-22">
+                    <label for="btype" class="mb-8" id="photo-count">Photos: 1/5</label>
+                    <div class="images-container d-flex gap-2 flex-wrap  align-items-center" id="image-container">
+                        <div class="open-image append-div">
+                            <img src="../assets/images/store/store-4.png" alt="">
+                            <div class="removebtn mt-5"><a href="#" class="mb-0 text-black"><i
+                                        class="fa fa-times"></i></a></div>
+                        </div><label for="" style="cursor: pointer;" id="add-image">
+                            <div class="open-image">
+                                <img src="../assets/images/gallery-add.png" alt="" class="mb-8">
+                                <h5 class="mb-0">Add photos</h5>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="main-fields">
+                    <div class="mb-22">
+                        <label for="title" class="mb-8">Title</label>
+                        <input type="text" class="custom-form" value="Air Jordans 1">
+                    </div>
+                    <div class="mb-22">
+                        <label for="desc" class="mb-8">Description</label>
+                        <input type="text" class="custom-form" value="lorem ipsum">
+                    </div>
+                    <div class="mb-22">
+                        <label for="desc" class="mb-8">Price</label>
+                        <div class="input-group flex-nowrap ">
+                            <span class="input-group-text px-3 border-0 bg-white"
+                                style="font-size: 16px; font-weight: 600;" id="addon-wrapping">$</span>
+                            <input type="number" class=" custom-form text-center" value="249.99">
+                        </div>
+                    </div>
+                    <div class="mb-22">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                            <label class="form-check-label" for="flexCheckDefault">
+                                I have read the instruction above and I agree to <a href="#">Marketplace terms and
+                                    condition</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-22">
+                        <button class="btn btn-market radius-100 w-100" type="submit">Update Post</button>
                     </div>
                 </div>
             </form>
@@ -719,7 +789,82 @@
         });
 
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let photoCount = 1; // Assuming one photo is already present
+            const maxPhotos = 5;
 
+            document.querySelector('#edit-product #add-image').addEventListener('click', function () {
+                if (photoCount < maxPhotos) {
+                    const newLabel = document.createElement('label');
+                    newLabel.setAttribute('for', 'triggerinput-' + (photoCount + 1));
+                    newLabel.style.cursor = 'pointer';
+                    newLabel.id = 'image-select-' + (photoCount + 1);
+
+                    const newDiv = document.createElement('div');
+                    newDiv.className = 'open-image';
+
+                    const newImg = document.createElement('img');
+                    newImg.src = '../assets/images/gallery-add.png';
+                    newImg.alt = '';
+                    newImg.className = 'mb-8';
+
+                    const newInput = document.createElement('input');
+                    newInput.type = 'file';
+                    newInput.id = 'triggerinput-' + (photoCount + 1);
+                    newInput.hidden = true;
+
+                    newDiv.appendChild(newImg);
+                    newDiv.appendChild(newInput);
+                    newLabel.appendChild(newDiv);
+
+                    const imageContainer = document.querySelector('#edit-product #image-container');
+                    const addImageLabel = document.querySelector('#edit-product #add-image');
+                    imageContainer.insertBefore(newLabel, addImageLabel);
+
+                    photoCount++;
+                    document.querySelector('#edit-product #photo-count').textContent = `Photos: ${photoCount}/5`;
+
+                    newInput.addEventListener('change', function (event) {
+                        if (event.target.files && event.target.files[0]) {
+                            const reader = new FileReader();
+                            reader.onload = function (e) {
+                                // Create the new div with the selected image
+                                const selectedDiv = document.createElement('div');
+                                selectedDiv.className = 'open-image append-div';
+
+                                const selectedImg = document.createElement('img');
+                                selectedImg.src = e.target.result;
+                                selectedImg.alt = '';
+
+                                const removeBtnDiv = document.createElement('div');
+                                removeBtnDiv.className = 'removebtn mt-5';
+
+                                const removeBtnLink = document.createElement('a');
+                                removeBtnLink.href = '#';
+                                removeBtnLink.className = 'mb-0 text-black';
+                                removeBtnLink.innerHTML = '<i class="fa fa-times"></i>';
+
+                                removeBtnDiv.appendChild(removeBtnLink);
+                                selectedDiv.appendChild(selectedImg);
+                                selectedDiv.appendChild(removeBtnDiv);
+
+                                imageContainer.replaceChild(selectedDiv, newLabel);
+
+                                removeBtnLink.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    imageContainer.removeChild(selectedDiv);
+                                    photoCount--;
+                                    document.querySelector('#edit-product #photo-count').textContent = `Photos: ${photoCount}/5`;
+                                });
+                            };
+                            reader.readAsDataURL(event.target.files[0]);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

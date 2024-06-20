@@ -160,6 +160,7 @@ body {
 }
 
 #edit-profile.offcanvas,
+#edit-product.offcanvas,
 #add-product.offcanvas,
 #edit-store.offcanvas,
 #post-feed.offcanvas {
@@ -1408,6 +1409,20 @@ footer {
     z-index: 99;
     top: -35px;
     right: 0;
+}
+
+@media (max-width:768px) {
+    .left-padding {
+        display: none;
+    }
+
+    .stores {
+        margin: 22px auto 22px;
+    }
+
+    .right-padding {
+        display: none;
+    }
 }
 
 .premium-carousel.owl-carousel {
@@ -3003,9 +3018,23 @@ input[type=number] {
     color: var(--white);
     font-size: 16px;
     font-weight: 600;
+    display: block;
+    width: fit-content;
 }
 
 .gold-carousel .owl-dots {
     display: none;
 }
 
+.mega-menu,
+.mega-menu ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.mega-menu li .nav_item {
+    color: var(--black);
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 8px 20px 8px 20px;
+}
