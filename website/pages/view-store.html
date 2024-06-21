@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Store | Market Place</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/owl.min.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/remixicon.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<style>
+
+</style>
+
+
+<body>
+    <div class="preloader ">
+        <div class="lds-ellipsis">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+
+    <div id="main-wrapper">
+        <div class="nav-bar px-85 py-30">
+            <div class="top-navbar mb-2">
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="../assets/images/logowhite.svg" alt="" class="img-fluid">
+                        </a>
+
+                        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            <span class="navbar-toggler-icon"></span>
+                        </button> -->
+
+
+
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close " data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                <div class="collapse navbar-collapse show" id="navbarSupportedContent">
+                                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                        <form class="d-flex justify-content-center position-relative align-items-center"
+                                            role="search" id="nav-search">
+                                            <input class="me-xl-2" type="search" placeholder="Search anything"
+                                                aria-label="Search">
+                                            <div id="search-icon">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                        </form>
+                                        <li class="nav-item ms-xl-4">
+                                            <a class="nav-link " aria-current="page" href="#">How to sell</a>
+                                        </li>
+                                        <li class="nav-item ms-xl-4">
+                                            <a class="nav-link" href="#">How to buy</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                        <li class="nav-item" id="sell">
+                                            <a class="nav-link " aria-current="page" href="#"><i class="fa fa-plus"></i>
+                                                Sell</a>
+                                        </li>
+                                        <li class="nav-item ms-xl-4" id="profile">
+                                            <div class="dropdown">
+                                                <a class="nav-link d-flex dropdown-toggle" href="#" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <div class="profile d-flex align-items-center gap-2">
+                                                        <div class="icon">
+                                                            <i class="ri-user-line"></i>
+                                                        </div>
+                                                        <div class="icon-text">
+                                                            <p class="mb-0">Profile</p>
+                                                            <h6 class="mb-0">Jhone doe <i
+                                                                    class="fa-solid fa-chevron-down"></i></h6>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="account.html">My Profile</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+            <div class="top-navbar">
+                <nav class="navbar navbar-expand-lg flex-lg-wrap flex-xl-nowrap">
+                    <div class="container-fluid">
+
+                        <div class="top-icons">
+                            <div class="menu-icons  d-flex align-items-center ">
+                                <span class="d-flex align-items-center justify-content-center "> <i
+                                        class="ri-add-line"></i></span>
+                                <a href="#" data-bs-toggle="offcanvas" data-bs-target="#search"
+                                    aria-controls="offcanvasRight" class="ms-22"> <i class="ri-search-line"></i></a>
+                                <!-- <a class="ms-22" href="#"><i class="fa-regular fa-user"></i></a> -->
+                                <div class="dropdown ms-22">
+                                    <a class="nav-link d-flex dropdown-toggle" href="#" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-user-line"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="account.html">My Profile</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#main_nav" aria-controls="offcanvasExample">
+                            <i class="fa-solid fa-bars hamburger"></i>
+                        </button>
+
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="main_nav"
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                                <button type="button" class="btn-close " style="background: none !important;"
+                                    data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <i class="fa fa-times text-white"></i></button>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                <div class="collapse navbar-collapse show justify-content-center flex-wrap"
+                                    id="navbarSupportedContent">
+                                    <div class="dropdown-container">
+                                        <select name="category" id="category" class="dropdown-category">
+                                            <option value="">All Category</option>
+                                            <option value="">Option 1</option>
+                                            <option value="">Option 2</option>
+                                            <option value="">Option 3</option>
+                                        </select>
+                                    </div>
+                                    <!-- <div class="dropdown-category">
+                                        <a class="navbar-brand d-flex align-items-center justify-content-between me-0"
+                                            href="#">
+                                            <div class="category d-flex align-items-center ">
+                                                <span class="material-symbols-outlined">
+                                                    filter_list
+                                                </span>
+                                                All Category
+                                            </div>
+                                            <span class="material-symbols-outlined">
+                                                keyboard_arrow_down</span>
+                                        </a>
+                                    </div> -->
+                                    <ul class="navbar-nav ms-xl-auto mb-2 mb-lg-0 ">
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link " aria-current="page" href="#">Exclusive store</a>
+                                        </li>
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link" href="#">Handmade products</a>
+                                        </li>
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link" href="#">Food courts</a>
+                                        </li>
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link" href="#">Open market</a>
+                                        </li>
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link" href="#">Advertise here</a>
+                                        </li>
+                                        <li class="nav-item ms-22">
+                                            <a class="nav-link" href="blog.html">Blogs</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="coupon pl ">
+            <div class="container-fluid d-flex align-items-center justify-content-between">
+                <div class="sale-coupon d-flex flex-column">
+                    <h4 class="m-0">News flash ⚡️</h4>
+                    <p class="m-0">Expand Your Reach, Boost Your Sales, and Connect with Thousands of Customers
+                        Instantly. <span><a href="#">Shop now</a></span>
+                    </p>
+                </div>
+                <a href="#" id="remove-ad">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </a>
+            </div>
+        </div>
+
+        <section class="specific-path pr">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="specific-header d-flex align-items-center gap-2">
+                            <p class="mb-0"><a href="index.html">Home</a></p>
+                            <span><i class="ri-arrow-right-s-line"></i></span>
+                            <p class="mb-0"><a href="index.html">Profile</a></p>
+                            <span><i class="ri-arrow-right-s-line"></i></span>
+                            <p class="mb-0"><a href="index.html">My stores</a></p>
+                            <span><i class="ri-arrow-right-s-line"></i></span>
+                            <span class="mb-0"><a href="#">Cars Stand</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="view_store pr py-50">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="store-header-view d-flex justify-content-between align-items-center mb-12">
+                            <h4 class="mb-0">Cars Stand</h4>
+                            <a href="#" class="btn btn-market radius-100" data-bs-toggle="offcanvas"
+                                data-bs-target="#add-product" aria-controls="offcanvasRight">Add new product <i
+                                    class="fa fa-plus"></i></a>
+                        </div>
+
+                        <div class="store-view">
+                            <div class="storetabs mb-32">
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item w-50" role="presentation">
+                                        <button class="nav-link active w-100" id="pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true">About</button>
+                                    </li>
+                                    <li class="nav-item w-50" role="presentation">
+                                        <button class="nav-link w-100" id="pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-profile" type="button" role="tab"
+                                            aria-controls="pills-profile" aria-selected="false">Products</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                    aria-labelledby="pills-home-tab" tabindex="0">
+                                    <div class="about-store-view">
+                                        <div class="mb-50">
+                                            <div class="abbt mb-22">
+                                                <h5>About</h5>
+                                                <p class="mb-0">Let your client know a little more about you and your
+                                                    business</p>
+                                            </div>
+                                            <div class="container-view-store text-end mb-22">
+                                                <span>125/300</span>
+                                                <p class="mb-0">Welcome to Jay's Barbers Shop, where grooming meets
+                                                    tradition! As a
+                                                    family-owned establishment since 1992, we take immense pride in our
+                                                    rich
+                                                    history and exceptional service. Our skilled barbers blend the
+                                                    classic
+                                                    art of barbering with modern styling techniques to give you the
+                                                    perfect
+                                                    look that stands the test of time.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-50">
+                                            <div class="abbt mb-12">
+                                                <h5>Address</h5>
+                                                <p class="mb-0">Please provide the address to your business place</p>
+                                            </div>
+                                            <div class="container-view-store mb-22">
+                                                <p class="mb-0">e.g 12 Gibbs street Denver, Colorado</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-50">
+                                            <div class="abbt mb-22">
+                                                <h5>Contact</h5>
+                                                <p class="mb-0">Please provide your contact information for clients</p>
+                                            </div>
+                                            <div class="container-view-store mb-22">
+                                                <p class="mb-0">Phone number</p>
+                                            </div>
+                                            <div class="container-view-store ">
+                                                <p class="mb-0">Email</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade store-view-list product-list" id="pills-profile"
+                                    role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                                    <div class="product-search mb-22">
+                                        <form action="" class="position-relative">
+                                            <input type="text" class="custom-form " placeholder="Search product">
+                                            <a href="" id="search-list-icon">
+                                                <div class="product-search-list">
+                                                    <i class="ri-search-line"></i>
+                                                </div>
+                                            </a>
+                                        </form>
+                                    </div>
+                                    <div class="open_container ">
+                                        <div class="row">
+                                            <div class="col-lg-4 mb-4">
+                                                <div class="card custom-card ">
+                                                    <div class="card-body ">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-2">
+                                                            <a href="productdetail.html" class="color-inherit">
+                                                                <div class="open-info mb-2">
+                                                                    <h4>Air Jordans 1</h4>
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <h5 class="mb-0 ">
+                                                                            <p class="mb-0 dollar">$</p>
+                                                                        </h5>
+                                                                        <h6 class="mb-0">254.99</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="#" class="view-store-edit"
+                                                                data-bs-toggle="offcanvas"
+                                                                data-bs-target="#edit-product"
+                                                                aria-controls="offcanvasRight">Edit</a>
+                                                        </div>
+                                                        <div class="owl-carousel owl-theme open-carousel">
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-1.png" alt=""
+                                                                    class="img-fluid store-image">
+
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-7.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-8.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-10.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mb-4">
+                                                <div class="card custom-card ">
+                                                    <div class="card-body ">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-2">
+                                                            <a href="productdetail.html" class="color-inherit">
+                                                                <div class="open-info mb-2">
+                                                                    <h4>Tee shirts</h4>
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <h5 class="mb-0 ">
+                                                                            <p class="mb-0 dollar">$</p>
+                                                                        </h5>
+                                                                        <h6 class="mb-0">254.99</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="#" class="view-store-edit"
+                                                                data-bs-toggle="offcanvas"
+                                                                data-bs-target="#edit-product"
+                                                                aria-controls="offcanvasRight">Edit</a>
+                                                        </div>
+
+                                                        <div class="owl-carousel owl-theme open-carousel">
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-7.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-8.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-10.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-1.png" alt=""
+                                                                    class="img-fluid store-image">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mb-4">
+                                                <div class="card custom-card ">
+                                                    <div class="card-body ">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-2">
+
+                                                            <a href="productdetail.html" class="color-inherit">
+                                                                <div class="open-info mb-2">
+                                                                    <h4>Rings</h4>
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <h5 class="mb-0 ">
+                                                                            <p class="mb-0 dollar">$</p>
+                                                                        </h5>
+                                                                        <h6 class="mb-0">254.99</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="#" class="view-store-edit"
+                                                                data-bs-toggle="offcanvas"
+                                                                data-bs-target="#edit-product"
+                                                                aria-controls="offcanvasRight">Edit</a>
+                                                        </div>
+
+                                                        <div class="owl-carousel owl-theme open-carousel">
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-8.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-10.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-1.png" alt=""
+                                                                    class="img-fluid store-image">
+
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-7.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mb-4">
+                                                <div class="card custom-card ">
+                                                    <div class="card-body ">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-2">
+                                                            <a href="productdetail.html" class="color-inherit">
+                                                                <div class="open-info mb-2">
+                                                                    <h4>Baby wears</h4>
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <h5 class="mb-0 ">
+                                                                            <p class="mb-0 dollar">$</p>
+                                                                        </h5>
+                                                                        <h6 class="mb-0">254.99</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="#" class="view-store-edit"
+                                                                data-bs-toggle="offcanvas"
+                                                                data-bs-target="#edit-product"
+                                                                aria-controls="offcanvasRight">Edit</a>
+                                                        </div>
+
+                                                        <div class="owl-carousel owl-theme open-carousel">
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-10.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-1.png" alt=""
+                                                                    class="img-fluid store-image">
+
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-7.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                            <div class="item ">
+                                                                <img src="../assets/images/store/store-8.png" alt=""
+                                                                    class="img-fluid store-image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer id="footer " class="pr">
+            <div class="py-100 ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="footer-info">
+                                <div class="footer-logo mb-32">
+                                    <img src="../assets/images/logo.svg" alt="">
+                                </div>
+                                <div class="footer-text">
+                                    <h5 class="mb-32">We are the number one digital store rental platform offering
+                                        visibility and
+                                        customers to small businesses</h5>
+                                    <div class="footer-icons">
+                                        <p>Follow us</p>
+                                        <div>
+                                            <a href="#">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-brands fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <div class="quick-links">
+                                <h4 class="mb-32">QUICK-LINKS</h4>
+                                <div class="links">
+                                    <a href="#">Website</a>
+                                    <a href="#">Values</a>
+                                    <a href="#">Mission</a>
+                                    <a href="#">Values</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <div class="quick-links">
+                                <h4 class="mb-32">ABOUT</h4>
+                                <div class="links">
+                                    <a href="#">Website</a>
+                                    <a href="#">Values</a>
+                                    <a href="#">Mission</a>
+                                    <a href="#">Values</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <div class="quick-links">
+                                <h4 class="mb-32">Legal</h4>
+                                <div class="links">
+                                    <a href="#">Website</a>
+                                    <a href="#">Values</a>
+                                    <a href="#">Mission</a>
+                                    <a href="#">Values</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-text ">
+                <p class="mb-0">Market Place</p>
+                <p class="mb-0">All Rights Reserved © 2024</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="search" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-center">
+            <!-- <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5> -->
+            <button type="button" class="btn-close" style="background: none;" data-bs-dismiss="offcanvas"
+                aria-label="Close">
+                <i class="fa fa-times text-white"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <form class="d-flex justify-content-center position-relative align-items-center" role="search"
+                id="nav-search">
+                <input class="me-xl-2" type="search" placeholder="Search anything" aria-label="Search">
+                <div id="search-icon">
+                    <i class="fa fa-search"></i>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="add-product" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-center">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Product</h5>
+            <button type="button" class="btn-close" style="background: none;" data-bs-dismiss="offcanvas"
+                aria-label="Close">
+                <i class="fa fa-times "></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <form action="#">
+                <div class="mb-22">
+                    <label for="btype" class="mb-8" id="photo-count">Photos: 0/5</label>
+                    <div class="images-container d-flex gap-2 flex-wrap  align-items-center" id="image-container">
+                        <label for="" style="cursor: pointer;" id="add-image">
+                            <div class="open-image">
+                                <img src="../assets/images/gallery-add.png" alt="" class="mb-8">
+                                <h5 class="mb-0">Add photos</h5>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="main-fields">
+                    <div class="mb-22">
+                        <label for="title" class="mb-8">Title</label>
+                        <input type="text" class="custom-form">
+                    </div>
+                    <div class="mb-22">
+                        <label for="desc" class="mb-8">Description</label>
+                        <input type="text" class="custom-form">
+                    </div>
+                    <div class="mb-22">
+                        <label for="desc" class="mb-8">Price</label>
+                        <div class="input-group flex-nowrap ">
+                            <span class="input-group-text px-3 border-0 bg-white"
+                                style="font-size: 16px; font-weight: 600;" id="addon-wrapping">$</span>
+                            <input type="number" class=" custom-form text-center" placeholder="0">
+                        </div>
+                    </div>
+                    <div class="mb-22">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                I have read the instruction above and I agree to <a href="#">Marketplace terms and
+                                    condition</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-22">
+                        <button class="btn btn-market radius-100 w-100" type="submit">Post</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="edit-product" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-center">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Edit Product</h5>
+            <button type="button" class="btn-close" style="background: none;" data-bs-dismiss="offcanvas"
+                aria-label="Close">
+                <i class="fa fa-times "></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <form action="#">
+                <div class="mb-22">
+                    <label for="btype" class="mb-8" id="photo-count">Photos: 1/5</label>
+                    <div class="images-container d-flex gap-2 flex-wrap  align-items-center" id="image-container">
+                        <div class="open-image append-div">
+                            <img src="../assets/images/store/store-4.png" alt="">
+                            <div class="removebtn mt-5"><a href="#" class="mb-0 text-black"><i
+                                        class="fa fa-times"></i></a></div>
+                        </div><label for="" style="cursor: pointer;" id="add-image">
+                            <div class="open-image">
+                                <img src="../assets/images/gallery-add.png" alt="" class="mb-8">
+                                <h5 class="mb-0">Add photos</h5>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="main-fields">
+                    <div class="mb-22">
+                        <label for="title" class="mb-8">Title</label>
+                        <input type="text" class="custom-form" value="Air Jordans 1">
+                    </div>
+                    <div class="mb-22">
+                        <label for="desc" class="mb-8">Description</label>
+                        <input type="text" class="custom-form" value="lorem ipsum">
+                    </div>
+                    <div class="mb-22">
+                        <label for="desc" class="mb-8">Price</label>
+                        <div class="input-group flex-nowrap ">
+                            <span class="input-group-text px-3 border-0 bg-white"
+                                style="font-size: 16px; font-weight: 600;" id="addon-wrapping">$</span>
+                            <input type="number" class=" custom-form text-center" value="249.99">
+                        </div>
+                    </div>
+                    <div class="mb-22">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                            <label class="form-check-label" for="flexCheckDefault">
+                                I have read the instruction above and I agree to <a href="#">Marketplace terms and
+                                    condition</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-22">
+                        <button class="btn btn-market radius-100 w-100" type="submit">Update Post</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/owl.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/owl.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let photoCount = 0;
+            const maxPhotos = 5;
+
+            document.getElementById('add-image').addEventListener('click', function () {
+                if (photoCount < maxPhotos) {
+                    const newLabel = document.createElement('label');
+                    newLabel.setAttribute('for', 'triggerinput-' + (photoCount + 1));
+                    newLabel.style.cursor = 'pointer';
+                    newLabel.id = 'image-select-' + (photoCount + 1);
+
+                    const newDiv = document.createElement('div');
+                    newDiv.className = 'open-image';
+
+                    const newImg = document.createElement('img');
+                    newImg.src = '../assets/images/gallery-add.png';
+                    newImg.alt = '';
+                    newImg.className = 'mb-8';
+
+                    const newInput = document.createElement('input');
+                    newInput.type = 'file';
+                    newInput.id = 'triggerinput-' + (photoCount + 1);
+                    newInput.hidden = true;
+
+                    newDiv.appendChild(newImg);
+                    newDiv.appendChild(newInput);
+                    newLabel.appendChild(newDiv);
+
+                    const imageContainer = document.getElementById('image-container');
+                    const addImageLabel = document.getElementById('add-image');
+                    imageContainer.insertBefore(newLabel, addImageLabel);
+
+                    photoCount++;
+                    document.getElementById('photo-count').textContent = `Photos: ${photoCount}/5`;
+
+                    newInput.addEventListener('change', function (event) {
+                        if (event.target.files && event.target.files[0]) {
+                            const reader = new FileReader();
+                            reader.onload = function (e) {
+                                // Create the new div with the selected image
+                                const selectedDiv = document.createElement('div');
+                                selectedDiv.className = 'open-image append-div';
+
+                                const selectedImg = document.createElement('img');
+                                selectedImg.src = e.target.result;
+                                selectedImg.alt = '';
+
+                                const removeBtnDiv = document.createElement('div');
+                                removeBtnDiv.className = 'removebtn mt-5';
+
+                                const removeBtnLink = document.createElement('a');
+                                removeBtnLink.href = '#';
+                                removeBtnLink.className = 'mb-0 text-black';
+                                removeBtnLink.innerHTML = '<i class="fa fa-times"></i>';
+
+                                removeBtnDiv.appendChild(removeBtnLink);
+                                selectedDiv.appendChild(selectedImg);
+                                selectedDiv.appendChild(removeBtnDiv);
+
+                                imageContainer.replaceChild(selectedDiv, newLabel);
+
+                                removeBtnLink.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    imageContainer.removeChild(selectedDiv);
+                                    photoCount--;
+                                    document.getElementById('photo-count').textContent = `Photos: ${photoCount}/5`;
+                                });
+                            };
+                            reader.readAsDataURL(event.target.files[0]);
+                        }
+                    });
+                }
+            });
+        });
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let photoCount = 1; // Assuming one photo is already present
+            const maxPhotos = 5;
+
+            document.querySelector('#edit-product #add-image').addEventListener('click', function () {
+                if (photoCount < maxPhotos) {
+                    const newLabel = document.createElement('label');
+                    newLabel.setAttribute('for', 'triggerinput-' + (photoCount + 1));
+                    newLabel.style.cursor = 'pointer';
+                    newLabel.id = 'image-select-' + (photoCount + 1);
+
+                    const newDiv = document.createElement('div');
+                    newDiv.className = 'open-image';
+
+                    const newImg = document.createElement('img');
+                    newImg.src = '../assets/images/gallery-add.png';
+                    newImg.alt = '';
+                    newImg.className = 'mb-8';
+
+                    const newInput = document.createElement('input');
+                    newInput.type = 'file';
+                    newInput.id = 'triggerinput-' + (photoCount + 1);
+                    newInput.hidden = true;
+
+                    newDiv.appendChild(newImg);
+                    newDiv.appendChild(newInput);
+                    newLabel.appendChild(newDiv);
+
+                    const imageContainer = document.querySelector('#edit-product #image-container');
+                    const addImageLabel = document.querySelector('#edit-product #add-image');
+                    imageContainer.insertBefore(newLabel, addImageLabel);
+
+                    photoCount++;
+                    document.querySelector('#edit-product #photo-count').textContent = `Photos: ${photoCount}/5`;
+
+                    newInput.addEventListener('change', function (event) {
+                        if (event.target.files && event.target.files[0]) {
+                            const reader = new FileReader();
+                            reader.onload = function (e) {
+                                // Create the new div with the selected image
+                                const selectedDiv = document.createElement('div');
+                                selectedDiv.className = 'open-image append-div';
+
+                                const selectedImg = document.createElement('img');
+                                selectedImg.src = e.target.result;
+                                selectedImg.alt = '';
+
+                                const removeBtnDiv = document.createElement('div');
+                                removeBtnDiv.className = 'removebtn mt-5';
+
+                                const removeBtnLink = document.createElement('a');
+                                removeBtnLink.href = '#';
+                                removeBtnLink.className = 'mb-0 text-black';
+                                removeBtnLink.innerHTML = '<i class="fa fa-times"></i>';
+
+                                removeBtnDiv.appendChild(removeBtnLink);
+                                selectedDiv.appendChild(selectedImg);
+                                selectedDiv.appendChild(removeBtnDiv);
+
+                                imageContainer.replaceChild(selectedDiv, newLabel);
+
+                                removeBtnLink.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    imageContainer.removeChild(selectedDiv);
+                                    photoCount--;
+                                    document.querySelector('#edit-product #photo-count').textContent = `Photos: ${photoCount}/5`;
+                                });
+                            };
+                            reader.readAsDataURL(event.target.files[0]);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
