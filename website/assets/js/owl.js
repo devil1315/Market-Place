@@ -173,6 +173,7 @@ $(".account-store-carousel").owlCarousel({
   },
 });
 
+
 // thumbnail
 // $(document).ready(function () {
 //   var sync1 = $("#sync1");

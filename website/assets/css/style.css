@@ -3071,3 +3071,75 @@ input[type=number] {
     border-top-left-radius: 0.375rem !important;
     border-top-right-radius: 0.375rem !important;
 }
+
+#blog-details p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #3E3E3E;
+}
+
+.blog-detail-carousel .owl-nav .owl-prev {
+    position: absolute;
+    left: 16px;
+}
+
+.blog-detail-carousel .owl-nav .owl-next {
+    position: absolute;
+    right: 16px;
+}
+
+.blog-detail-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -27px;
+}
+
+.blog-detail-carousel .owl-nav button {
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 20%) !important;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.blog-detail-carousel .owl-nav button i {
+    color: #fff;
+}
+
+.blog-detail-carousel .owl-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blog-detail-carousel .owl-dot.active {
+    width: 42px;
+    background-color: #00FF00 !important;
+}
+
+.blog-detail-carousel .owl-dot {
+    background: #fff !important;
+    width: 21px;
+    height: 6px;
+    border-radius: 29px;
+    -webkit-border-radius: 29px;
+    -moz-border-radius: 29px;
+    -ms-border-radius: 29px;
+    -o-border-radius: 29px;
+    margin-right: 4px;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: var(--navbar-bg) !important;
+}

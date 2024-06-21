@@ -9,13 +9,13 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 $(window).on("load", function () {
-  $("body").addClass("customclass");
+  // $("body").addClass("customclass");
 
   setTimeout(function () {
     $(".preloader")
       .delay(700)
       .fadeOut(700, function () {
-        $("body").removeClass("customclass");
+        // $("body").removeClass("customclass");
       })
       .addClass("loaded");
   }, 800);
