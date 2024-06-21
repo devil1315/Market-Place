@@ -408,6 +408,10 @@
                 title.value = ''
                 desc.value = ''
                 append_tbody.appendChild(tr)
+
+                const modalElement = document.querySelector('#add_notification');
+                const modalInstance = bootstrap.Modal.getInstance(modalElement);
+                modalInstance.hide();
             }
             document.querySelectorAll('.deletebtn').forEach(function (btn) {
                 btn.addEventListener('click', function () {

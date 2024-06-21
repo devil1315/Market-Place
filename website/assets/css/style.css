@@ -257,6 +257,8 @@ a {
     -moz-border-radius: 100px;
     -ms-border-radius: 100px;
     -o-border-radius: 100px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 @media(max-width:1250px) {
@@ -3063,11 +3065,6 @@ input[type=number] {
 #profile .dropdown-menu li a,
 .top-icons .dropdown .dropdown-menu li a {
     padding-block: 0.5rem;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
     border-top-left-radius: 0.375rem !important;
     border-top-right-radius: 0.375rem !important;
 }
@@ -3142,4 +3139,13 @@ input[type=number] {
 .dropdown-item.active,
 .dropdown-item:active {
     background-color: var(--navbar-bg) !important;
+}
+
+#sell i {
+    margin-right: 8px;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    border-radius: 0.375rem !important;
 }
