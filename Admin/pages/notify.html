@@ -259,7 +259,7 @@
                                                     <th scope="col">Option</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody id="append-tbody">
                                                 <tr>
                                                     <th scope="row">1</th>
                                                     <td>Lorem ipsum</td>
@@ -277,7 +277,7 @@
                                                                 data-bs-target="#view_notification"
                                                                 class="btn-primary p-2 rounded-3"><i
                                                                     class="fa fa-eye"></i></a>
-                                                            <a href="#" class="btn-danger p-2 rounded-3"><i
+                                                            <a href="#" class="btn-danger p-2 rounded-3 deletebtn"><i
                                                                     class="fa fa-trash"></i></a>
                                                         </div>
                                                     </td>
@@ -299,7 +299,7 @@
                                                                 data-bs-target="#view_notification"
                                                                 class="btn-primary p-2 rounded-3"><i
                                                                     class="fa fa-eye"></i></a>
-                                                            <a href="#" class="btn-danger p-2 rounded-3"><i
+                                                            <a href="#" class="btn-danger p-2 rounded-3 deletebtn"><i
                                                                     class="fa fa-trash"></i></a>
                                                         </div>
                                                     </td>
@@ -321,7 +321,7 @@
                                                                 data-bs-target="#view_notification"
                                                                 class="btn-primary p-2 rounded-3"><i
                                                                     class="fa fa-eye"></i></a>
-                                                            <a href="#" class="btn-danger p-2 rounded-3"><i
+                                                            <a href="#" class="btn-danger p-2 rounded-3 deletebtn"><i
                                                                     class="fa fa-trash"></i></a>
                                                         </div>
                                                     </td>
@@ -361,21 +361,62 @@
                     <form action="">
                         <div class="mb-3">
                             <label for="Title">Title</label>
-                            <input type="text" class="form-control" placeholder="Enter Title" disabled>
+                            <input type="text" class="form-control" name="title" placeholder="Enter Title">
                         </div>
                         <div class="mb-3">
                             <label for="desc">Description</label>
-                            <textarea name="desc" id="desc" class="form-control" disabled rows="5"
+                            <textarea name="desc" id="desc" class="form-control" rows="5"
                                 placeholder="Enter Description"></textarea>
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-primary">Add Notification</button>
+                            <button class="btn btn-primary" type="submit">Add Notification</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        const add_form = document.querySelector('#add_notification form')
+        const append_tbody = document.querySelector('#append-tbody')
+        let count = append_tbody.querySelectorAll('tr').length + 1;
+
+        add_form.addEventListener('submit', function (e) {
+            e.preventDefault()
+            let title = document.querySelector('input[name="title"]')
+            let desc = document.querySelector('textarea[name="desc"]')
+            let gettitle = title.value.trim()
+            let getdesc = desc.value.trim()
+            if (gettitle !== '' || getdesc !== '') {
+                const tr = document.createElement('tr')
+                tr.innerHTML = `<th scope="row">${count}</th>
+                                <td>${gettitle}</td>
+                                <td>
+                                    <p class="text-para">${getdesc}</p>
+                                </td>
+                                <td>
+                                    <div>
+                                        <a href="#" data-bs-toggle="modal"
+                                            data-bs-target="#view_notification"
+                                            class="btn-primary p-2 rounded-3"><i
+                                                class="fa fa-eye"></i></a>
+                                        <a href="#" class="btn-danger p-2 rounded-3 deletebtn"><i
+                                                class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>`
+                count++
+                title.value = ''
+                desc.value = ''
+                append_tbody.appendChild(tr)
+            }
+            document.querySelectorAll('.deletebtn').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    btn.closest('tr').remove();
+                });
+            });
+        })
+
+    </script>
     <div class="modal fade" id="view_notification" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
