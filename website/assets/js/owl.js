@@ -197,7 +197,7 @@ $(document).ready(function () {
 
   sync2
     .on("initialized.owl.carousel", function () {
-      sync2.find(".owl-item").eq(0).addClass("current active-border"); // Add 'active-border' here
+      sync2.find(".owl-item").eq(0).addClass("current active-border");
     })
     .owlCarousel({
       items: slidesPerPage,

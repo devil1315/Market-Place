@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Carousel</title>
+    <style>
+        .wrapper {
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .main-slide {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .main-slide .custom-item {
+            min-width: 100%;
+        }
+
+        .main-slide .custom-item img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .thumb-slide {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .thumb-slide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .thumb-slide .custom-item {
+            flex: 0 0 calc(25% - 10px);
+            cursor: pointer;
+        }
+
+        .thumb-slide .custom-item img {
+            width: 100%;
+        }
+
+        @media (max-width:768px) {
+            .thumb-slide .custom-item {
+                flex: 0 0 calc(20% - 10px);
+                cursor: pointer;
+            }
+
+            .thumb-slide .custom-item img {
+                border-radius: 100%;
+                aspect-ratio: 4/4;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main-slide">
+            <div class="custom-item">
+                <img src="../Admin/assets/images/product/product-2.svg" alt="Product 2">
+            </div>
+            <div class="custom-item">
+                <img src="../Admin/assets/images/product/product-3.svg" alt="Product 3">
+            </div>
+            <div class="custom-item">
+                <img src="../Admin/assets/images/product/product-2.svg" alt="Product 4">
+            </div>
+            <div class="custom-item">
+                <img src="../Admin/assets/images/product/product-3.svg" alt="Product 5">
+            </div>
+        </div>
+        <div class="thumb-slide">
+            <div class="custom-item">
+                <img src="../Admin/assets/images/product/product-2.svg" alt="Product 2">
+            </div>
+            <div class="custom-item">
+                <img src="../Admin/assets/images/product/product-3.svg" alt="Product 3">
+            </div>
+            <div class="custom-item">
+                <img src="../Admin/assets/images/product/product-2.svg" alt="Product 4">
+            </div>
+            <div class="custom-item">
+                <img src="../Admin/assets/images/product/product-3.svg" alt="Product 5">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mainSlide = document.querySelector('.main-slide');
+            const thumbItems = document.querySelectorAll('.thumb-slide .custom-item');
+            const mainItems = document.querySelectorAll('.main-slide .custom-item');
+
+            thumbItems.forEach((thumb, index) => {
+                thumb.addEventListener('click', function () {
+                    const offset = -index * 100;
+                    mainSlide.style.transform = `translateX(${offset}%)`;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
