@@ -240,7 +240,8 @@ form label {
 
 .form-container {
     border: 1px solid var(--stroke);
-    padding: 36px;
+    /* padding: 36px; */
+    padding: 26px 20px 26px 20px;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -316,4 +317,52 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+.switching {
+    font-size: 18px;
+    font-weight: 600;
+    color: #263238;
+}
+
+#update {
+    color: #000000 !important;
+}
+
+#update-email-btn {
+    padding: 18px 8px 18px 8px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    background: #191919 !important;
+    border-color: #191919 !important;
+}
+
+#update-email .btn-close,
+#update-number .btn-close {
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    box-shadow: 0px 4px 14px 0px #E3E3E329;
+    background-color: #fff;
+    right: -16px;
+    top: -18px;
+    opacity: 1;
+    position: absolute;
+}
+
+#update-email .modal-content,
+#update-number .modal-content {
+    padding: 8px !important;
+    border-radius: 22px !important;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
 }

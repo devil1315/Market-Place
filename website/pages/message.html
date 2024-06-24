@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message | Market Place</title>
-    <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/owl.min.css">
@@ -73,7 +73,8 @@
                                     </ul>
                                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                         <li class="nav-item" id="sell">
-                                            <a class="nav-link " aria-current="page" href="#"><i class="fa fa-plus"></i>
+                                            <a class="nav-link " aria-current="page" href="add_open_market.html"><i
+                                                    class="fa fa-plus"></i>
                                                 Sell</a>
                                         </li>
                                         <li class="nav-item ms-xl-4" id="profile">
@@ -205,7 +206,7 @@
                         Instantly. <span><a href="#">Shop now</a></span>
                     </p>
                 </div>
-             <a href="#" id="remove-ad">
+                <a href="#" id="remove-ad">
                     <i class="fa-solid fa-circle-xmark"></i>
                 </a>
             </div>
@@ -283,133 +284,114 @@
                     <div class="col-lg-9 py-30px" id="col-9">
                         <div class="main-info px-26px">
                             <h4 class="mb-22">Messages</h4>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="card h-100  p-22px"
-                                        style="border: 1px solid #F0F4FF;border-radius: 12px !important;">
-                                        <div class="chat-thread">
-                                            <ul id="thread-scroll">
-                                                <li class="mb-16 active">
-                                                    <a href="#">
-                                                        <div class="d-flex gap-3 flex-nowrap">
-                                                            <img src="../assets/images/store/store-3.png" alt=""
-                                                                width="50" height="50" class="rounded-circle">
-                                                            <div>
-                                                                <h4>Car Dealer</h4>
-                                                                <p>I am very sorry, I can arrange delivery for you as
-                                                                    soon as possible.</p>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="mb-16 ">
-                                                    <a href="#">
-                                                        <div class="d-flex gap-3 flex-nowrap">
-                                                            <img src="../assets/images/store/store-5.png" alt=""
-                                                                width="50" height="50" class="rounded-circle">
-                                                            <div>
-                                                                <h4>Handmade store</h4>
-                                                                <p>I am very sorry, I can arrange delivery for you as
-                                                                    soon as possible.</p>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="mb-16 ">
-                                                    <a href="#">
-                                                        <div class="d-flex gap-3 flex-nowrap">
-                                                            <img src="../assets/images/store/store-12.png" alt=""
-                                                                width="50" height="50" class="rounded-circle">
-                                                            <div>
-                                                                <h4>Kiddies store</h4>
-                                                                <p>I am very sorry, I can arrange delivery for you as
-                                                                    soon as possible.</p>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                            <div class="row" id="message-thread">
+                                <div class="col-lg-12 mb-22">
+                                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#message-details"
+                                        aria-controls="offcanvasRight">
+                                        <div class="card">
+                                            <div class="message-day d-flex gap-2 align-items-center">
+                                                <h5 class="mb-0">Monday</h5>
+                                                <span class="badge">New</span>
+                                            </div>
+                                            <div class="message-user d-flex gap-2 align-items-center">
+                                                <h5 class="mb-0">Message From:</h5>
+                                                <div class="store-user d-flex align-items-center">
+                                                    <img src="../assets/images/store/store-5.png" alt="" class="me-1">
+                                                    <h4 class="mb-0">Babies store</h4>
+                                                </div>
+                                            </div>
+                                            <div class="message-userss d-flex gap-2 align-items-center flex-wrap">
+                                                <img src="../assets/images/user.png" alt="">
+                                                <div>
+                                                    <h3 class="mb-0">Kate Williams</h3>
+                                                    <h4 class="mb-0">Kate: How can I arrive at your store coming from
+                                                        silicon valley?
+                                                    </h4>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div class="col-lg-8">
-                                    <div class="card "
-                                        style="border: 1px solid #F0F4FF;border-radius: 12px !important;">
-                                        <div class="chat-header myCard d-flex ">
-                                            <img src="../assets/images/store/store-3.png" alt="" width="27" height="27"
-                                                class="rounded-circle">
-                                            <h4>Car Dealer</h4>
+                                <div class="col-lg-12 mb-22">
+                                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#message-details"
+                                        aria-controls="offcanvasRight">
+                                        <div class="card">
+                                            <div class="message-day d-flex gap-2 align-items-center">
+                                                <h5 class="mb-0">Monday</h5>
+                                                <span class="badge">New</span>
+                                            </div>
+                                            <div class="message-user d-flex gap-2 align-items-center">
+                                                <h5 class="mb-0">Message From:</h5>
+                                                <div class="store-user d-flex align-items-center">
+                                                    <img src="../assets/images/store/store-5.png" alt="" class="me-1">
+                                                    <h4 class="mb-0">Babies store</h4>
+                                                </div>
+                                            </div>
+                                            <div class="message-userss d-flex gap-2 align-items-center flex-wrap">
+                                                <img src="../assets/images/user.png" alt="">
+                                                <div>
+                                                    <h3 class="mb-0">Kate Williams</h3>
+                                                    <h4 class="mb-0">Kate: How can I arrive at your store coming from
+                                                        silicon valley?
+                                                    </h4>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <ul class="onetone p-22px" id="chat-scroll">
-                                            <li class="right mb-3">
-                                                <div class="mymessage message">
-                                                    <div>
-                                                        <p>Can I know the exact location to your shop</p>
-                                                        <span class="timespan">12:18 </span>
-                                                    </div>
-                                                    <img src="../assets/images/store/store-12.png" alt="" width="32"
-                                                        height="32" class="rounded-circle">
+                                    </a>
+                                </div>
+                                <div class="col-lg-12 mb-22">
+                                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#message-details"
+                                        aria-controls="offcanvasRight">
+                                        <div class="card">
+                                            <div class="message-day d-flex gap-2 align-items-center">
+                                                <h5 class="mb-0">Monday</h5>
+                                                <span class="badge">New</span>
+                                            </div>
+                                            <div class="message-user d-flex gap-2 align-items-center">
+                                                <h5 class="mb-0">Message From:</h5>
+                                                <div class="store-user d-flex align-items-center">
+                                                    <img src="../assets/images/store/store-5.png" alt="" class="me-1">
+                                                    <h4 class="mb-0">Babies store</h4>
                                                 </div>
-                                            </li>
-                                            <li class="left mb-3">
-                                                <div class="othermessage message">
-                                                    <img src="../assets/images/store/store-3.png" alt="" width="32"
-                                                        height="32" class="rounded-circle">
-                                                    <div>
-                                                        <p>Can I know the exact location to your shop</p>
-                                                        <span class="timespan">12:18 </span>
-                                                    </div>
+                                            </div>
+                                            <div class="message-userss d-flex gap-2 align-items-center flex-wrap">
+                                                <img src="../assets/images/user.png" alt="">
+                                                <div>
+                                                    <h3 class="mb-0">Kate Williams</h3>
+                                                    <h4 class="mb-0">Kate: How can I arrive at your store coming from
+                                                        silicon valley?
+                                                    </h4>
                                                 </div>
-                                            </li>
-                                            <li class="right mb-3">
-                                                <div class="mymessage message">
-                                                    <div>
-                                                        <p>Can I know the exact location to your shop</p>
-                                                        <span class="timespan">12:18 </span>
-                                                    </div>
-                                                    <img src="../assets/images/store/store-12.png" alt="" width="32"
-                                                        height="32" class="rounded-circle">
-                                                </div>
-                                            </li>
-                                            <li class="left mb-3">
-                                                <div class="othermessage message">
-                                                    <img src="../assets/images/store/store-3.png" alt="" width="32"
-                                                        height="32" class="rounded-circle">
-                                                    <div>
-                                                        <p>Can I know the exact location to your shop</p>
-                                                        <span class="timespan">12:18 </span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="right mb-3">
-                                                <div class="mymessage message">
-                                                    <div>
-                                                        <p>Can I know the exact location to your shop</p>
-                                                        <span class="timespan">12:18 </span>
-                                                    </div>
-                                                    <img src="../assets/images/store/store-12.png" alt="" width="32"
-                                                        height="32" class="rounded-circle">
-                                                </div>
-                                            </li>
-                                            <li class="left mb-3">
-                                                <div class="othermessage message">
-                                                    <img src="../assets/images/store/store-3.png" alt="" width="32"
-                                                        height="32" class="rounded-circle">
-                                                    <div>
-                                                        <p>Can I know the exact location to your shop</p>
-                                                        <span class="timespan">12:18 </span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="chat-footer pz-20">
-                                            <form action="" class="d-flex gap-3 align-items-center flex-nowrap">
-                                                <input type="text" class="send-message" placeholder="Type here">
-                                                <button type="submit" class="send-btn"><i
-                                                        class="ri-send-plane-fill"></i></button>
-                                            </form>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-12 mb-22">
+                                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#message-details"
+                                        aria-controls="offcanvasRight">
+                                        <div class="card">
+                                            <div class="message-day d-flex gap-2 align-items-center">
+                                                <h5 class="mb-0">Monday</h5>
+                                                <span class="badge">New</span>
+                                            </div>
+                                            <div class="message-user d-flex gap-2 align-items-center">
+                                                <h5 class="mb-0">Message From:</h5>
+                                                <div class="store-user d-flex align-items-center">
+                                                    <img src="../assets/images/store/store-5.png" alt="" class="me-1">
+                                                    <h4 class="mb-0">Babies store</h4>
+                                                </div>
+                                            </div>
+                                            <div class="message-userss d-flex gap-2 align-items-center flex-wrap">
+                                                <img src="../assets/images/user.png" alt="">
+                                                <div>
+                                                    <h3 class="mb-0">Kate Williams</h3>
+                                                    <h4 class="mb-0">Kate: How can I arrive at your store coming from
+                                                        silicon valley?
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -504,6 +486,98 @@
                 <div id="search-icon">
                     <i class="fa fa-search"></i>
                 </div>
+            </form>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="message-details" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-center">
+            <h5 class="offcanvas-title offcanvas-user d-flex align-items-center gap-2 flex-wrap"
+                id="offcanvasRightLabel">
+                <img src="../assets/images/user.png" alt="">
+                <div>
+                    <h4 class="mb-0">Katrina Wilson</h4>
+                    <div class="message-user d-flex gap-2 align-items-center">
+                        <h5 class="mb-0">Message From:</h5>
+                        <div class="store-user d-flex align-items-center">
+                            <img src="../assets/images/store/store-5.png" alt="" class="me-1">
+                            <h4 class="mb-0">Babies store</h4>
+                        </div>
+                    </div>
+                </div>
+            </h5>
+            <button type="button" class="btn-close" style="background: none;" data-bs-dismiss="offcanvas"
+                aria-label="Close">
+                <i class="fa fa-times "></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="onetone p-22px">
+                <li class="right mb-3">
+                    <div class="mymessage message">
+                        <div>
+                            <p>Can I know the exact location to your shop</p>
+                            <span class="timespan">12:18 </span>
+                        </div>
+                        <img src="../assets/images/store/store-12.png" alt="" width="32" height="32"
+                            class="rounded-circle">
+                    </div>
+                </li>
+                <li class="left mb-3">
+                    <div class="othermessage message">
+                        <img src="../assets/images/store/store-3.png" alt="" width="32" height="32"
+                            class="rounded-circle">
+                        <div>
+                            <p>Can I know the exact location to your shop</p>
+                            <span class="timespan">12:18 </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="right mb-3">
+                    <div class="mymessage message">
+                        <div>
+                            <p>Can I know the exact location to your shop</p>
+                            <span class="timespan">12:18 </span>
+                        </div>
+                        <img src="../assets/images/store/store-12.png" alt="" width="32" height="32"
+                            class="rounded-circle">
+                    </div>
+                </li>
+                <li class="left mb-3">
+                    <div class="othermessage message">
+                        <img src="../assets/images/store/store-3.png" alt="" width="32" height="32"
+                            class="rounded-circle">
+                        <div>
+                            <p>Can I know the exact location to your shop</p>
+                            <span class="timespan">12:18 </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="right mb-3">
+                    <div class="mymessage message">
+                        <div>
+                            <p>Can I know the exact location to your shop</p>
+                            <span class="timespan">12:18 </span>
+                        </div>
+                        <img src="../assets/images/store/store-12.png" alt="" width="32" height="32"
+                            class="rounded-circle">
+                    </div>
+                </li>
+                <li class="left mb-3">
+                    <div class="othermessage message">
+                        <img src="../assets/images/store/store-3.png" alt="" width="32" height="32"
+                            class="rounded-circle">
+                        <div>
+                            <p>Can I know the exact location to your shop</p>
+                            <span class="timespan">12:18 </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="chat-footer pz-20">
+            <form action="" class="d-flex gap-3 align-items-center flex-nowrap">
+                <input type="text" class="send-message" placeholder="Type here">
+                <button type="submit" class="send-btn"><i class="ri-send-plane-fill"></i></button>
             </form>
         </div>
     </div>
