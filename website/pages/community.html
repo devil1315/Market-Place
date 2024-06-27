@@ -206,7 +206,7 @@
                         Instantly. <span><a href="#">Shop now</a></span>
                     </p>
                 </div>
-             <a href="#" id="remove-ad">
+                <a href="#" id="remove-ad">
                     <i class="fa-solid fa-circle-xmark"></i>
                 </a>
             </div>
@@ -282,11 +282,20 @@
 
                     </div>
                     <div class="col-lg-9 py-30px" id="col-9">
+                        <div
+                            class="community-info px-26px d-flex justify-content-between align-items-center flex-wrap gap-3 mb-22">
+                            <div>
+                                <h3 class="mb-8">Community</h3>
+                                <p>Interact with community members 🤩</p>
+                            </div>
+                            <div class="myprofile-user">
+                                <a href="#" data-bs-toggle="offcanvas" data-bs-target="#mypost-feed"
+                                    aria-controls="offcanvasRight"> <img src="../assets/images/user.png" alt=""></a>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-lg-8">
                                 <div class="community-info px-26px">
-                                    <h3 class="mb-8">Community</h3>
-                                    <p>Interact with community members 🤩</p>
                                     <div class="share-post-container ">
                                         <div class="d-flex align-items-center mb-12 gap-2">
                                             <div class="share-profile position-relative">
@@ -302,13 +311,15 @@
                                         <hr style="border: 1px solid #F4F4F4; margin-block: 12px">
                                         <div
                                             class="post-media d-flex justify-content-between mb-50 align-items-center px-2">
-                                            <label for="media" style="cursor: pointer;">
-                                                <div class="add-image">
-                                                    <img src="../assets/images/gallery-add.png" class="img-fluid"
-                                                        alt="">
-                                                    <input type="file" hidden id="media">
-                                                </div>
-                                            </label>
+                                            <div id="post-media" class="d-flex gap-2">
+                                                <label for="media" style="cursor: pointer;">
+                                                    <div class="add-image">
+                                                        <img src="../assets/images/gallery-add.png" class="img-fluid"
+                                                            alt="">
+                                                        <input type="file" hidden id="media">
+                                                    </div>
+                                                </label>
+                                            </div>
                                             <a href="#" class="btn btn-market radius-10">Post</a>
                                         </div>
 
@@ -713,11 +724,183 @@
             </form>
         </div>
     </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mypost-feed" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-center">
+            <h5 class="offcanvas-title m-auto" id="offcanvasRightLabel">
+                <div class="d-flex align-items-center mb-12 gap-3">
+                    <div class="share-profile position-relative">
+                        <img src="../assets/images/user.png" class="rounded-circle" alt="">
+                        <div class="vip">
+                            <img src="../assets/images/vip.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="nameofuser">
+                        <h5 class="mb-0">Peter Dury <span style="font-size: 12px;font-weight: 400;color: #7D7D7D;">|
+                                @mrdury_official</span></h5>
+                        <span>My Posts</span>
+                    </div>
+                </div>
+            </h5>
+            <button type="button" class="btn-close" style="background: none;margin: 0 !important; "
+                data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa fa-times "></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="post-community">
+                <div class="post mb-24">
+                    <div class="d-flex align-items-center mb-12 gap-3">
+                        <div class="share-profile position-relative">
+                            <img src="../assets/images/user.png" class="rounded-circle" alt="">
+                            <div class="vip">
+                                <img src="../assets/images/vip.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="nameofuser d-flex justify-content-between align-items-center w-100 ">
+                            <div>
+                                <h5 class="mb-0">@danielsnr <span
+                                        style="font-size: 12px;font-weight: 400;color: #7D7D7D;">|
+                                        @mrdury_official</span></h5>
+                                <span class="spantime">2 mins ago</span>
+                            </div>
+                            <div>
+                                <div class="dropdown">
+                                    <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="ri-more-line text-black"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Edit Post</a></li>
+                                        <li><a class="dropdown-item" href="#">Delete Post</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-desc mb-12">
+                        <p>Get access to top quality venues for your events</p>
+                    </div>
+
+                    <hr style="border: 1px solid #F4F4F4; margin-block: 12px;">
+                    <div class="like-comment">
+                        <a href="#">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="ri-heart-fill"></i><span>200</span>
+                            </div>
+                        </a>
+                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#post-feed"
+                            aria-controls="offcanvasRight">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="ri-wechat-line"></i><span>120</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="post mb-24">
+                    <div class="d-flex align-items-center mb-12 gap-3">
+                        <div class="share-profile position-relative">
+                            <img src="../assets/images/user.png" class="rounded-circle" alt="">
+                            <div class="vip">
+                                <img src="../assets/images/vip.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="nameofuser d-flex justify-content-between align-items-center w-100">
+                            <div>
+                                <h5 class="mb-0">@danielsnr <span
+                                        style="font-size: 12px;font-weight: 400;color: #7D7D7D;">|
+                                        @mrdury_official</span></h5>
+                                <span class="spantime">2 mins ago</span>
+                            </div>
+                            <div>
+                                <div class="dropdown">
+                                    <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="ri-more-line text-black"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Edit Post</a></li>
+                                        <li><a class="dropdown-item" href="#">Delete Post</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-desc mb-12">
+                        <p>Get access to top quality venues for your events</p>
+                    </div>
+                    <div class="post-image mb-12">
+                        <img src="../assets/images/post-1.png" alt="" class="img-fluid">
+                    </div>
+                    <hr style="border: 1px solid #F4F4F4; margin-block: 12px;">
+                    <div class="like-comment">
+                        <a href="#">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="ri-heart-fill"></i><span>200</span>
+                            </div>
+                        </a>
+                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#post-feed"
+                            aria-controls="offcanvasRight">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="ri-wechat-line"></i><span>120</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/script.js"></script>
+    <script>
+        document.getElementById('media').addEventListener('change', function (event) {
+            const fileInput = event.target;
+            const files = fileInput.files;
+            if (files.length > 0) {
+                const file = files[0];
+                const reader = new FileReader();
 
+                reader.onload = function (e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.className = 'img-fluid';
+                    img.style.maxWidth = '100%';
+                    img.style.borderRadius = '8px';
+
+                    const deleteBtn = document.createElement('a');
+                    deleteBtn.href = '#'
+                    deleteBtn.className = 'remove-posts';
+                    deleteBtn.style.marginLeft = '10px';
+                    deleteBtn.style.position = 'absolute';
+                    deleteBtn.style.left = '5px';
+
+                    const deleteIcon = document.createElement('i');
+                    deleteIcon.style.color = '#F05A5A'
+                    deleteIcon.className = 'fas fa-trash';
+
+                    deleteBtn.appendChild(deleteIcon);
+
+                    const wrapper = document.createElement('div');
+
+                    wrapper.className = 'add-image my-image position-relative';
+                    wrapper.appendChild(img);
+                    wrapper.appendChild(deleteBtn);
+
+                    deleteBtn.addEventListener('click', function () {
+                        wrapper.remove();
+                    });
+
+                    const postMedia = document.querySelector('#post-media');
+                    postMedia.insertBefore(wrapper, postMedia.children[0]);
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 
 </html>
