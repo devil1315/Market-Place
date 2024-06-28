@@ -126,6 +126,9 @@ $(".review-carousel").owlCarousel({
 $(".premium-carousel").owlCarousel({
   loop: true,
   margin: 10,
+  autoplay: true,
+  autoplayTimeout: 2000,
+  smartSpeed: 800,
   responsiveClass: true,
   navText: [
     "<i class='fa fa-chevron-left'></i>",
