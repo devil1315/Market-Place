@@ -167,6 +167,7 @@ body {
 }
 
 #edit-profile.offcanvas,
+#update-file.offcanvas,
 #message-details.offcanvas,
 #mypost-feed.offcanvas,
 #edit-product.offcanvas,
@@ -3375,4 +3376,46 @@ input[type=number] {
 .my-image:hover .remove-posts {
     opacity: 1;
     visibility: visible;
+}
+
+.backtostore {
+    padding-inline: 30px;
+    padding-block: 10px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    background: #F5F6F7;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-close {
+    --bs-btn-close-focus-shadow: none !important;
+}
+
+.btn-draft {
+    padding-inline: 22px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    background: #FFFFFF;
+    border: 1px solid #E4E4E7;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btn-draft:focus,
+.btn-draft:hover,
+.btn-draft:active {
+    background: #FFFFFF;
+    border: 1px solid #E4E4E7 !important;
+
+}
+
+.specific-header {
+    flex-wrap: wrap;
 }
