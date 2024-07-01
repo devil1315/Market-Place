@@ -172,7 +172,8 @@
                                     </div> -->
                                     <ul class="navbar-nav ms-xl-auto mb-2 mb-lg-0 ">
                                         <li class="nav-item ms-22">
-                                            <a class="nav-link " aria-current="page" href="#">Exclusive store</a>
+                                            <a class="nav-link " aria-current="page"
+                                                href="exclusive-store.html">Exclusive store</a>
                                         </li>
                                         <li class="nav-item ms-22">
                                             <a class="nav-link" href="#">Handmade products</a>
@@ -206,7 +207,7 @@
                         Instantly. <span><a href="#">Shop now</a></span>
                     </p>
                 </div>
-             <a href="#" id="remove-ad">
+                <a href="#" id="remove-ad">
                     <i class="fa-solid fa-circle-xmark"></i>
                 </a>
             </div>
@@ -285,8 +286,11 @@
                         <div class="main-info px-26px">
                             <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-22">
                                 <h4 class="mb-0">My stores</h4>
-                                <a href="create-store.html" class="btn btn-market radius-100">Create new store <i
-                                        class="fa fa-plus"></i></a>
+                                <div>
+                                    <a href="create-store.html" class="btn btn-market radius-100">Create new store <i
+                                            class="fa fa-plus"></i></a>
+                                    <a href="store-draft.html" class="btn btn-draft radius-100">Draft</a>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
@@ -536,8 +540,47 @@
                         </div>
                     </div>
                     <div class="mb-22">
-                        <button class="btn mybtn w-100" type="submit">Save</button>
+                        <button class="btn mybtn w-100" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#update-file" aria-controls="offcanvasRight">Save</button>
                     </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="update-file" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-center">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Edit store</h5>
+            <button type="button" class="btn-close" style="background: none;" data-bs-dismiss="offcanvas"
+                aria-label="Close">
+                <i class="fa fa-times "></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <form class="">
+                <div class="main-fields">
+                    <a href="#" class="backtostore text-black " data-bs-toggle="offcanvas" data-bs-target="#edit-store"
+                        aria-controls="offcanvasRight">Back</a>
+                    <div class="mb-22 mt-3">
+                        <label for="simage" style="font-size: 24px !important;">Add document</label>
+                        <p class="mb-22">Please add a new document to verify your new information</p>
+                        <div>
+                            <label for="simages" class="w-100 mb-12" style="cursor: pointer;">
+                                <div class="store-images-container">
+                                    <img src="../assets/images/document-upload.svg" alt="" class="img-fluid mb-8">
+                                    <h5>Upload document</h5>
+                                    <input type="file" id="simages" multiple="" hidden="">
+                                </div>
+                            </label>
+                            <p style="font-size: 16px;font-weight: 500;color: #F05A5A;">Document format can be
+                                PNG,JPEG,PDF or Docx</p>
+                        </div>
+                        <div class="append-container d-flex gap-3 flex-wrap align-items-center mt-3">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mb-22">
+                    <button class="btn mybtn w-100" type="submit">Update</button>
                 </div>
             </form>
         </div>
