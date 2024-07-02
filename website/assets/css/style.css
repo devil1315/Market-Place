@@ -647,6 +647,7 @@ a {
 .quick-links h4 {
     font-weight: 700;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 @media(max-width:768px) {
